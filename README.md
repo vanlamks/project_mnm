@@ -1,33 +1,36 @@
-# Hướng Dẫn Chạy Project
+# 🍽️ Dự Án Django + React - Hướng Dẫn Cài Đặt & Chạy
 
-## Bước 1: Cài Đặt Cơ Sở Dữ Liệu
-- Mở **Visual Studio** và mở folder vừa tải về.
-- Chạy file tạo database trong **MySQL**.
-- Truy cập file `settings.py` của project **Home** để chỉnh sửa thông tin kết nối với MySQL.
+## 📦 Yêu cầu hệ thống
 
-## Bước 2: Cài Đặt Môi Trường
-Mở Terminal và chạy các dòng lệnh sau:
+- Python 3.8+
+- Node.js 16+
+- MySQL đang chạy
+- pip, npm đã cài
+
+---
+
+## 🔧 Cài đặt Backend (Django)
 
 ```bash
+# Di chuyển vào thư mục dự án backend
 cd Home
+
+# Cài đặt các gói cần thiết
 pip install django
 pip install mysqlclient
 pip install djangorestframework
 pip install django-cors-headers
-npm install
-npm install framer-motion react-rating-stars-component
-# Cài Gói Frontend
-cd Home
+
+# Tạo migration và apply vào database
+python manage.py makemigrations
 python manage.py migrate
-#Khởi Tạo Database
-cd Home
-python manage.py migrate
-#Tạo Tài Khoản Quản Trị (Admin)
-cd Home
+
+# Tạo tài khoản admin
 python manage.py createsuperuser
-#Chạy Trang Web
-cd Home
-py manage.py runserver
+
+# Chạy server Django
+python manage.py runserver
+
 Truy cập trang admin: http://127.0.0.1:8000/admin/ (yêu cầu đăng nhập admin).
 
 Một số endpoint API:
@@ -56,6 +59,16 @@ http://127.0.0.1:8000/api/pw/
 
 http://127.0.0.1:8000/api/reset-password/
 
-#Frontend
-cd Home/frontend
+# Di chuyển vào thư mục frontend
+cd frontend
+
+# Cài đặt các thư viện cần thiết
+npm install
+npm install framer-motion react-rating-stars-component
+
+# Nếu lỗi "react-scripts not found"
+npm install react-scripts --save
+
+# Chạy frontend
 npm start
+
