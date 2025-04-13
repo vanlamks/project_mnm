@@ -77,23 +77,25 @@ const RestaurantDetailh = () => {
     </div>
 
     <div className="flex flex-wrap gap-3 mt-5">
-      <button
-        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl flex items-center shadow"
-        onClick={() =>
-          window.open("https://maps.app.goo.gl/us2XJAFLMWxGnF8o8", "_blank")
-        }
-      >
-        <MapPin className="w-4 h-4 mr-2" /> Chỉ đường
-      </button>
+  <a
+    href="https://www.google.com/maps/dir/?api=1&destination=34+C%C3%B4+B%E1%BA%AFc%2C+Ph%C6%B0%E1%BB%9Dng+C%E1%BA%A7u+%C3%94ng+L%C3%A3nh%2C+Qu%E1%BA%ADn+1%2C+H%E1%BB%93+Ch%C3%AD+Minh"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-xl flex items-center shadow">
+      <MapPin className="w-4 h-4 mr-2" /> Chỉ đường
+    </button>
+  </a>
 
-      <div className="relative">
-        <motion.button
-          whileTap={{ scale: 0.95 }}
-          onClick={() => setShowShareMenu(!showShareMenu)}
-          className="bg-white hover:bg-gray-100 text-gray-800 px-4 py-2 rounded-xl flex items-center shadow"
-        >
-          <Share className="w-4 h-4 mr-2 animate-pulse" /> Chia sẻ
-        </motion.button>
+  <div className="relative">
+    <motion.button
+      whileTap={{ scale: 0.95 }}
+      onClick={() => setShowShareMenu(!showShareMenu)}
+      className="bg-white hover:bg-gray-100 text-gray-800 px-4 py-2 rounded-xl flex items-center shadow"
+    >
+      {/* Nút chia sẻ ở đây */}
+      Chia sẻ
+    </motion.button>
         {showShareMenu && (
           <div className="absolute z-10 bg-white border rounded-lg mt-2 shadow-lg">
             <a
