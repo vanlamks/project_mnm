@@ -62,17 +62,25 @@ const PhongViDetail = () => {
           </div>
 
           <div className="flex flex-wrap gap-3 mt-5">
-            <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-xl flex items-center shadow">
-              <MapPin className="w-4 h-4 mr-2" /> Chỉ đường
-            </button>
-            <div className="relative">
-              <motion.button
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setShowShareMenu(!showShareMenu)}
-                className="bg-white hover:bg-gray-100 text-gray-800 px-4 py-2 rounded-xl flex items-center shadow"
-              >
-                <Share className="w-4 h-4 mr-2 animate-pulse" /> Chia sẻ
-              </motion.button>
+  <a
+    href="https://www.google.com/maps/dir/?api=1&destination=259+Tr%E1%BA%A7n+Ph%C3%BA%2C+P.7%2C+Q.5%2C+H%E1%BB%93+Ch%C3%AD+Minh"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-xl flex items-center shadow">
+      <MapPin className="w-4 h-4 mr-2" /> Chỉ đường
+    </button>
+  </a>
+
+  <div className="relative">
+    <motion.button
+      whileTap={{ scale: 0.95 }}
+      onClick={() => setShowShareMenu(!showShareMenu)}
+      className="bg-white hover:bg-gray-100 text-gray-800 px-4 py-2 rounded-xl flex items-center shadow"
+    >
+      {/* Nút chia sẻ ở đây */}
+      Chia sẻ
+    </motion.button>
               {showShareMenu && (
                 <div className="absolute z-10 bg-white border rounded-lg mt-2 shadow-lg">
                   <a href="https://facebook.com" target="_blank" rel="noreferrer" className="block px-4 py-2 hover:bg-gray-100">Facebook</a>
