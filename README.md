@@ -13,6 +13,7 @@
 
 ```bash
 # Di chuyển vào thư mục dự án backend
+# Mở terminal
 cd Home
 
 # Cài đặt các gói cần thiết
@@ -69,6 +70,7 @@ npm install framer-motion react-rating-stars-component
 # Nếu lỗi "react-scripts not found"
 npm install react-scripts --save
 
+# Mở terminal mới
 # Chạy frontend
 npm start
 
